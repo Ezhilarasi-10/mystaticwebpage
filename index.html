@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezhilarasi | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5ff;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #17172e;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: #a99cff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #a99cff;
+        }
+
+        section {
+            padding: 60px 8%;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            background: linear-gradient(135deg, #e9e7ff, #ffffff);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero span {
+            color: #6558e8;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #6558e8;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        h2.section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+            color: #6558e8;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .skills-container,
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #6558e8;
+            margin-bottom: 12px;
+        }
+
+        .education {
+            text-align: center;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        footer {
+            background: #17172e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+                display: inline-block;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Ezhilarasi.</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Hello, I'm <span>Ezhilarasi K.</span></h1>
+        <p>Computer Science Engineering Student | Aspiring Web Developer</p>
+        <a href="#projects" class="btn">Explore My Projects</a>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I am a Computer Science and Engineering student interested in
+            web development, programming, and technology. I enjoy learning
+            new skills, solving problems, and developing useful applications.
+            My goal is to become a skilled developer and build creative
+            digital solutions.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+
+            <div class="card">
+                <h3>Programming</h3>
+                <p>Python, C, C++</p>
+            </div>
+
+            <div class="card">
+                <h3>Tools</h3>
+                <p>Git, GitHub, VS Code</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="projects-container">
+            <div class="card">
+                <h3>CanteenIQ AI</h3>
+                <p>
+                    A smart campus canteen application for menu browsing,
+                    food ordering, availability checking, and pickup tokens.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>AI Resume Screening System</h3>
+                <p>
+                    A Python-based application that extracts resume details
+                    and helps compare resumes with job requirements.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Dynamic QR Attendance</h3>
+                <p>
+                    A collaborative project exploring QR-based attendance
+                    and attendance verification.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="section-title">Education</h2>
+
+        <div class="card">
+            <h3>B.E. Computer Science and Engineering</h3>
+            <p>Coimbatore Institute of Engineering and Technology</p>
+            <p>Currently Pursuing</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Me</h2>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <input type="email" id="email" placeholder="Your Email" required>
+
+            <textarea id="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Ezhilarasi K. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const subject = encodeURIComponent("Portfolio Contact");
+            const body = encodeURIComponent(
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\nMessage: " + message
+            );
+
+            window.location.href =
+                "mailto:your-email@example.com?subject=" +
+                subject + "&body=" + body;
+        });
+    </script>
+
+</body>
+</html>
